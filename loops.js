@@ -8,6 +8,14 @@ for(i = 0; i <= 5; i++){
 x= 0;
 
 while (x!=5){
-    console.log("This is a WHILE loop, x = ", x)
     x++;
+    console.log("This is a WHILE loop, x = ", x)
 }
+
+x= 0;
+
+do{
+    x++;
+    console.log("This is a DO{}WHILE(cond) loop, x = ", x)
+} while(x!=4);
+
