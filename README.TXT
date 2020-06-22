@@ -5,4 +5,4 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add wikit https://github.com/DimaDennys/LASP.git
-git push -u origin wikit
+git push -u wikit master
