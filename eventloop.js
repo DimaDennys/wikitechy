@@ -20,21 +20,15 @@
 //import events module 
 const events = require('events');
 // Create an eventEmitter object
-var eventEmitter = new events.EventEmitter();
+const eventEmitter = new events.EventEmitter();
 //Create an event handler for connnectHandler
-eventEmitter.on('connection', connnectHandler);
+
 
 // Bind the data event
-const dataReceivedHandler = function (){
-    console.log('Data received');
-}
-
+const dataSent = eventEmitter.on('dataSent', ()=> console.log('data has been sent'));
 // Create an event handler for dataReceivedHandler
-eventEmitter.on('data_received', dataReceivedHandler);
-// Fire the connection event
-eventEmitter.emit('connection');
-eventEmitter.emit('data_received');
+
+// Fire the data event
+eventEmitter.emit('dataSent', dataSent)
+
 // Bind the connection event
-function connnectHandler(){
-    console.log('Connection established');
-}
