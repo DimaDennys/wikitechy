@@ -1,0 +1,23 @@
+script steps.log
+when finish type exit
+cat steps.log | ansi2txt | col -bp >> express.txt
+////
+Record Terminal sessions with timestamps
+
+As one of our reader Mr.Alastair Montgomery mentioned in the comment section below, we could setup an alias which would timestamp the recorded sessions.
+
+Create an alias for the script command like below.
+
+$ alias rec=’script -aq ~/term.log-$(date “+%Y%m%d-%H-%M”)’
+
+Now simply enter the following command start recording the Terminal.
+
+$ rec
+///
+
+$ apropos "list directory"
+
+asciinema // record terminal sassion
+
+
+
