@@ -1,3 +1,5 @@
 querystring = require('querystring')
 const jsonObj = querystring.parse('name=dima&familyname=dennys')
 console.log(jsonObj)
+const qs = querystring.stringify(jsonObj)
+console.log(qs)
